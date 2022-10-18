@@ -9,13 +9,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { CervezasComponent } from './cervezas/cervezas.component';
+import { CervezaComponent } from './cerveza/cerveza.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CervezasComponent
+    CervezasComponent,
+    CervezaComponent
   ],
   imports: [
     BrowserModule,

@@ -15,7 +15,9 @@ form {
     padding: 2vh 2vh 2vh 2vh;
 }
 
-button { border: 1px solid white; padding: 0 50px;  }
+button { border: 1px solid white; 
+         padding: 0 50px; 
+}
 
 button:hover { 
     text-shadow: rgb(158, 117, 34) 3px 3px 4px; 

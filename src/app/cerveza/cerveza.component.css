@@ -1,0 +1,21 @@
+
+#container{
+    display: inline-block;
+}
+
+.card{
+    width: 150px;
+    height: 280px;
+    background-color: transparent;
+}
+
+.margin {
+    margin-right: 1vh;
+    margin-bottom: 1vh;
+}
+
+.title{
+    font-size: medium;
+    font-style: italic;
+}
+
