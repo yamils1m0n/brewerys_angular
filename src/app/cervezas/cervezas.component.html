@@ -1,0 +1,49 @@
+<div id="container">
+
+    <form>
+        <!-- Ciudad -->
+        <mat-form-field class="margin" color="accent" appearance="fill">
+            <mat-label>
+                Ingrese Ciudad
+                <mat-icon class="icon" aria-label="search icon" fontIcon="search"></mat-icon>
+            </mat-label>
+            <input matInput autocomplete="off" formControlName="city">
+        </mat-form-field>
+
+        <!-- Tipo Cerveza -->
+        <mat-form-field class="margin" color="accent" appearance="fill">
+            <mat-label>Favorite food</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                    {{food.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <!-- Nombre Cerveza -->
+        <mat-form-field class="margin" color="accent" appearance="fill">
+            <mat-label>Favorite food</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                    {{food.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <!-- Botón -->
+        <button mat-button color="accent">
+                <span style="color: white;">
+                    Buscar
+                </span> 
+        </button>
+    
+    </form>
+    
+    <div class="list">
+        <p>Listando Cervezas..</p>
+        <p>Listando Cervezas..</p>
+        <p>Listando Cervezas..</p>
+    </div>
+
+</div>
+

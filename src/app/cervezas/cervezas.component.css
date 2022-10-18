@@ -1,0 +1,29 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    margin: 5vh auto;
+    max-width: 90vh;
+}
+
+.margin {
+    margin-right: 1vh;
+}
+
+/**FORM**/
+form {
+    background-color: rgba(67, 30, 5, 0.548);
+    padding: 2vh 2vh 2vh 2vh;
+}
+
+button { border: 1px solid white; padding: 0 50px;  }
+
+button:hover { 
+    text-shadow: rgb(158, 117, 34) 3px 3px 4px; 
+}
+
+
+/**LIST**/
+.list {
+    background-color: rgba(134, 75, 35, 0.548);
+    padding: 2vh 2vh 2vh 2vh;
+}
