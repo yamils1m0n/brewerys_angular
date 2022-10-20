@@ -4,8 +4,7 @@
 }
 
 .card{
-    width: 150px;
-    height: 280px;
+    max-width: 200px;
     background-color: transparent;
 }
 
@@ -15,7 +14,7 @@
 }
 
 .title{
-    font-size: medium;
+    font-size: small;
     font-style: italic;
 }
 

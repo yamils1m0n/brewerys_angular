@@ -1,6 +1,6 @@
 <div id="container">
 
-    <form>
+    <form [formGroup]="myForm" (ngSubmit)="search($event)">
         <!-- Ciudad -->
         <mat-form-field class="margin" color="accent" appearance="fill">
             <mat-label>
@@ -12,26 +12,26 @@
 
         <!-- Tipo Cerveza -->
         <mat-form-field class="margin" color="accent" appearance="fill">
-            <mat-label>Favorite food</mat-label>
+            <mat-label>Tipo Cerveza</mat-label>
             <mat-select>
-                <mat-option *ngFor="let food of foods" [value]="food.value">
-                    {{food.viewValue}}
+                <mat-option *ngFor="let type of listTypeBrewerys" [value]="type.value">
+                    {{type.viewValue | uppercase}}
                 </mat-option>
             </mat-select>
         </mat-form-field>
 
         <!-- Nombre Cerveza -->
         <mat-form-field class="margin" color="accent" appearance="fill">
-            <mat-label>Favorite food</mat-label>
+            <mat-label>Nombre Cerveza</mat-label>
             <mat-select>
-                <mat-option *ngFor="let food of foods" [value]="food.value">
-                    {{food.viewValue}}
+                <mat-option *ngFor="let name of listNameBrewerys" [value]="name.value">
+                    {{name.viewValue}}
                 </mat-option>
             </mat-select>
         </mat-form-field>
 
         <!-- Botón -->
-        <button mat-button color="accent">
+        <button [disabled]='isDisabledBtn' mat-button color="accent">
                 <span style="color: white;">
                     Buscar
                 </span> 
@@ -40,10 +40,17 @@
     </form>
     
     <div class="list">
-        <app-cerveza></app-cerveza>
-        <app-cerveza></app-cerveza>
-        <app-cerveza></app-cerveza>
-        <app-cerveza></app-cerveza>
+
+        <!-- Mensaje -->
+        <p *ngIf='isEmpyBrewerys'>
+            <small>Aquí se listarán las cervezas encontradas.. </small>
+        </p>
+
+        <!-- Imprimo Brewerys -->
+        <mat-list-item *ngFor="let brewery of listPrintBrewerys">
+            <app-cerveza [brewery]=brewery></app-cerveza>
+        </mat-list-item>
+
     </div>
 
 </div>

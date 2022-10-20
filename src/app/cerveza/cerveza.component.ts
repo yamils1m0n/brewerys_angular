@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Brewery } from '../interfaces/brewery.interface';
 
 @Component({
   selector: 'app-cerveza',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CervezaComponent implements OnInit {
 
+  @Input() brewery!: Brewery
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  ngAfterContentChecked(){
   }
 
 }
